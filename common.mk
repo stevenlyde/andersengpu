@@ -23,15 +23,8 @@
 # Add new SM Versions here as devices with new Compute Capability are released
 SM_VERSIONS   := 10 11 12 13 20 21
 
-# user-dependent variables. Please change them for your particular system.
-CUDA_INSTALL_PATH ?= $(HOME)/src/cuda/cuda
-
 # location of the gcc version supported by this CUDA distro
 CCBIN := gcc
-
-ifdef cuda-install
-	CUDA_INSTALL_PATH := $(cuda-install)
-endif
 
 # detect OS
 OSUPPER = $(shell uname -s 2>/dev/null | tr [:lower:] [:upper:])
