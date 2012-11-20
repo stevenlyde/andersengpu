@@ -25,6 +25,9 @@ maxregisters	     := 36
 ################################################################################
 # Rules and targets
 
+# user-dependent variables. Please change them for your particular system.
+CUDA_INSTALL_PATH ?= $(HOME)/src/cuda-5.0
+
 include ../../common.mk
 
 LIB += -L. -lgzstream  -lz 
